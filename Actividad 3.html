@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Idioma principal del sitio: español -->
+<head>
+  <meta charset="UTF-8"> <!-- Codificación de caracteres: UTF-8 para soportar caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escalado responsivo en dispositivos móviles -->
+  <title>Tienda Online</title> <!-- Título de la pestaña del navegador -->
+
+  <style>
+    /* Estilos generales del cuerpo de la página */
+    body {
+      font-family: Arial, sans-serif;  /* Fuente moderna y legible */
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; /* Incluye el padding y borde dentro del ancho total */
+    }
+
+  /* Estilos del encabezado con imagen de fondo y logo */
+  header {
+   background-image: url('https://i.postimg.cc/wBHJL18q/fondo.jpg');  /* Imagen de fondo desde una URL pública */
+   background-size: 80%;                                             /* Escala la imagen al 80% de su tamaño original */
+   background-position: 100% center;                                 /* Alinea la imagen al borde derecho y centrada verticalmente */
+   background-repeat: no-repeat;                                     /* Evita que la imagen se repita */
+   color: black;                                                     /* Texto de color negro */
+   text-align: center;                                               /* Centra el texto horizontalmente */
+   padding: 60px 20px;                                               /* Espaciado interno: 60px vertical y 20px horizontal */
+   position: relative;                                               /* Permite posicionar elementos hijos de forma absoluta */
+    }
+
+/* Estilos del logo dentro del encabezado */
+  header img {
+   position: absolute;                                               /* Posicionamiento absoluto dentro del encabezado */
+   top: 20px;                                                        /* Distancia de 20px desde la parte superior */
+   left: 40px;                                                       /* Distancia de 40px desde el borde izquierdo */
+   width: 200px;                                                     /* Ancho fijo de 200px para el logo */
+    
+    }
+
+    /* Menú de navegación */
+    nav {
+      background-color: #333; /* Fondo oscuro */
+      overflow: hidden;       /* Asegura que el contenido flote correctamente */
+    }
+
+    nav a {
+      float: left;             /* Alinea los enlaces horizontalmente */
+      color: white;            /* Texto blanco */
+      text-align: center;
+      padding: 14px 16px;      /* Espaciado interno */
+      text-decoration: none;   /* Elimina subrayado */
+      font-weight: bold;       /* Texto en negrita */
+    }
+
+    nav a:hover {
+      background-color: #575757; /* Color de fondo al pasar el cursor */
+    }
+
+    /* Estilo para las secciones generales */
+    section {
+      padding: 40px 20px;  /* Espaciado interno en cada sección */
+    }
+
+    h2 {
+      color: #333;         /* Color oscuro para los títulos */
+    }
+
+    ul {
+      list-style-type: disc;    /* Lista con viñetas */
+      padding-left: 20px;       /* Espacio desde la izquierda */
+    }
+
+    /* Formulario de cotización */
+    form input,
+    form textarea {
+      display: block;         /* Cada campo se muestra en su propia línea */
+      width: 100%;            /* Ocupa todo el ancho disponible */
+      margin-bottom: 10px;    /* Espacio inferior entre campos */
+      padding: 10px;          /* Espaciado interno */
+      font-size: 16px;        /* Tamaño de letra */
+    }
+
+    /* Estilo del mapa */
+    .mapa iframe {
+      width: 100%;           /* Ancho completo */
+      height: 300px;         /* Altura del mapa */
+      border: none;          /* Elimina bordes */
+    }
+
+    /* Pie de página */
+    footer {
+      background-color: #f2f2f2;  /* Fondo gris claro */
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado principal con logo e información -->
+  <header>
+    <img src="https://i.postimg.cc/k5rsYQtv/logo.webp" alt="Logo"> <!-- Imagen del logo (Imagen desde la web) -->
+    <h1>Bienvenidos a Nuestra Tienda Online</h1> <!-- Título principal del sitio -->
+    <p>Los mejores productos al alcance de un clic</p> <!-- Subtítulo / eslogan -->
+  </header>
+
+  <!-- Menú de navegación con enlaces internos -->
+  <nav>
+    <a href="#tienda">Nuestra Tienda</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contáctenos</a>
+    <a href="#cotizacion">Solicitud de Cotización</a>
+    <a href="#cuento">Diseña tu cuento</a>
+  </nav>
+
+  <!-- Sección de presentación del equipo -->
+  <section id="tienda">
+    <h2>Nuestra Tienda</h2>
+    <p>Somos un equipo comprometido con ofrecer lo mejor a nuestros clientes. Nuestro equipo está conformado por:</p>
+    <ul>
+      <li>Carlos Andrés Palacios Jiménez</li>
+      <li>Ana María Vahos Muñoz</li>
+      <li>Héctor Atehortúa Betancur</li>
+    </ul>
+  </section>
+
+  <!-- Servicios que ofrece la tienda -->
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <ul>
+      <li><strong>Envíos a todo el país:</strong> Recibe tus productos sin salir de casa.</li>
+      <li><strong>Asesoría personalizada:</strong> Te ayudamos a elegir lo que necesitas.</li>
+    </ul>
+  </section>
+
+  <!-- Sección de contacto con información básica y mapa -->
+  <section id="contacto">
+    <h2>Contáctenos</h2>
+    <p><strong>WhatsApp:</strong> +57 300 123 4567</p>
+    <p><strong>Celular:</strong> +57 310 987 6543</p>
+    <p><strong>Dirección:</strong> Calle 123 #45-67, Medellín, Colombia</p>
+
+    <div class="mapa">
+      <!-- Mapa incrustado con ubicación en Medellín -->
+      <iframe src="https://www.google.com/maps?q=Medellin,Colombia&output=embed"></iframe>
+    </div>
+  </section>
+
+  <!-- Formulario para que el usuario solicite cotizaciones -->
+  <section id="cotizacion">
+    <h2>Solicitud de Cotización</h2>
+    <form>
+      <input type="text" placeholder="Nombre completo" required> <!-- Campo de nombre -->
+      <input type="email" placeholder="Correo electrónico" required> <!-- Campo de email -->
+      <textarea placeholder="Describe el producto que deseas cotizar" rows="5" required></textarea> <!-- Campo de mensaje -->
+      <input type="submit" value="Enviar solicitud"> <!-- Botón para enviar -->
+    </form>
+  </section>
+
+<!-- Diseña tu cuento -->
+<section id="cuento">
+  <h2>Diseña tu cuento</h2>
+  
+  <form id="formCuento">
+    <input type="text" id="nombre" placeholder="Nombres y apellidos" required>
+    <input type="text" id="apodo" placeholder="Apodo" required>
+    <input type="text" id="cabello" placeholder="Color de cabello" required>
+    <input type="text" id="ojos" placeholder="Color de ojos" required>
+    <input type="number" id="edad" placeholder="Edad" required>
+    <input type="text" id="hobby" placeholder="Hobby" required>
+    <input type="submit" value="Crear cuento">
+  </form>
+
+  <div id="resultado"></div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Nuestra Tienda Online - Todos los derechos reservados</p>
+</footer>
+
+<script>
+  const form = document.getElementById("formCuento");
+  const resultado = document.getElementById("resultado");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const apodo = document.getElementById("apodo").value;
+    const cabello = document.getElementById("cabello").value;
+    const ojos = document.getElementById("ojos").value;
+    const edad = document.getElementById("edad").value;
+    const hobby = document.getElementById("hobby").value;
+
+    const plantillas = [
+      `${nombre} (${apodo}) tenía ${edad} años. Con su cabello ${cabello} y sus ojos ${ojos}, siempre llamaba la atención en el barrio. Su pasatiempo favorito era ${hobby}, y gracias a él vivió aventuras inolvidables.`,
+      `Todos conocían a ${nombre}, o como prefería que lo llamaran: "${apodo}". A sus ${edad} años, con su cabello ${cabello} y sus ojos ${ojos}, pasaba horas practicando ${hobby}, sin saber que un día eso cambiaría su vida para siempre.`,
+      `En una pequeña ciudad vivía ${nombre}, apodado cariñosamente "${apodo}". De ${edad} años, cabello ${cabello} y ojos ${ojos}, dedicaba cada tarde a ${hobby}. Y así, entre risas y sueños, empezó su gran historia.`
+    ];
+
+    const cuentoAleatorio = plantillas[Math.floor(Math.random() * plantillas.length)];
+
+    resultado.innerHTML = `<h3>Tu cuento:</h3><p>${cuentoAleatorio}</p>`;
+  });
+</script>
+
+  <!-- Pie de página con derechos de autor -->
+  <footer>
+    <p>&copy; 2025 Nuestra Tienda Online - Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
