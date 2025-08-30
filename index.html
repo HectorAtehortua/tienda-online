@@ -271,6 +271,50 @@
       document.getElementById("cuento").value = cuento;
     }
   </script>
+<script>
+  const form = document.getElementById("formCotizacion");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const datos = {
+      nombre: document.getElementById("nombre").value,
+      ciudad: document.getElementById("ciudad").value,
+      direccion: document.getElementById("direccion").value,
+      celular: document.getElementById("celular").value,
+      productos: []
+    };
+
+    // Capturar productos seleccionados con cantidades
+    const productos = document.querySelectorAll("input[name='producto']");
+    const cantidades = document.querySelectorAll("input[name='cantidad']");
+
+    productos.forEach((prod, i) => {
+      if (prod.checked && cantidades[i].value > 0) {
+        const [nombre, precio] = prod.value.split("|");
+        datos.productos.push({
+          nombre,
+          precio: parseFloat(precio),
+          cantidad: parseInt(cantidades[i].value)
+        });
+      }
+    });
+
+    // Guardar datos en localStorage
+    localStorage.setItem("cotizacion", JSON.stringify(datos));
+
+    // Redirigir automáticamente a resultado.html
+    window.location.href = "resultado.html";
+  });
+
+  // Función del botón Cancelar
+  function cancelar() {
+    if (confirm("¿Seguro que quieres cancelar la cotización?")) {
+      // Redirige a la parte superior de la página (inicio)
+      window.location.href = "index.html";
+    }
+  }
+</script>
 
 </body>
 </html>
